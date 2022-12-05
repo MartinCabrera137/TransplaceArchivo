@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity"
+    android:background="@drawable/gradient">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lemon"
+        android:text="Registrate"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/lblEmailRegistro"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Ingresa tu correo electronico"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/emailRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblEmailRegistro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_forum_black_24dp"
+        android:inputType="textEmailAddress"
+        />
+
+    <TextView
+        android:id="@+id/lblPasswordRegistro"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/emailRegister"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Ingresa tu contraseña"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/passwordRegister"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblPasswordRegistro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_password"
+        android:inputType="textPassword"
+        />
+
+    <TextView
+        android:id="@+id/lblPassword2Registro"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/passwordRegister"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Confirma tu contraseña"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblPassword2Registro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_vpn_key_black_24dp"
+        android:inputType="textPassword" />
+
+
+    <TextView
+        android:id="@+id/lblNombreRegistro"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/confirmPassword"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Ingresa tu nombre completo"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/PersonName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblNombreRegistro"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:drawableLeft="@drawable/ic_account_user"
+        android:textColor="#fff"
+        android:inputType="textPersonName"
+        android:textSize="14dp" />
+
+
+    <Button
+        android:id="@+id/button_register"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/PersonName"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-81dp"
+        android:background="#FF00"
+        android:text="Registrarse"
+        android:textColor="#FFFF"
+        android:textSize="18dp"
+        />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="70dp"
+        android:layout_height="168dp"
+        android:layout_alignBottom="@+id/button_register"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-193dp" />
+
+
+</RelativeLayout>

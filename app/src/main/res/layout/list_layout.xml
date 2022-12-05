@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    app:cardElevation="3dp"
+    app:contentPadding="5dp"
+    app:cardUseCompatPadding="true"
+    android:background="@color/cardview_shadow_end_color">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundgradient"
+    android:padding="15dp"
+
+    >
+    <TextView
+        android:id="@+id/viewPPCodigoBarrasname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Codigo de barras"
+        android:fontFamily="@font/lemon"/>
+
+
+    <TextView
+        android:id="@+id/viewPPCodigoBarras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:textColor="#ffff"
+        android:fontFamily="@font/lemon"
+        android:layout_toEndOf="@+id/viewPPCodigoBarrasname"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/viewPClientename"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Cliente"
+        android:fontFamily="@font/lemon"/>
+
+
+    <TextView
+        android:id="@+id/viewPCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="141dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@+id/viewPClientename"
+        android:fontFamily="@font/lemon"
+        android:text="TextView"
+        android:textColor="#ffff" />
+
+    <TextView
+        android:fontFamily="@font/lemon"
+        android:id="@+id/viewPPedimentoname"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffff"
+        android:textStyle="bold"
+        android:text="Pedimento" />
+
+    <TextView
+        android:id="@+id/viewPPedimento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/viewPPedimentoname"
+        android:fontFamily="@font/lemon"
+        android:text="TextView"
+        android:textColor="#ffff" />
+
+    <TextView
+        android:fontFamily="@font/lemon"
+        android:id="@+id/viewPUbicacionname"
+        android:layout_marginTop="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="#ffff"
+        android:text="Ubicación" />
+
+    <TextView
+        android:id="@+id/viewPUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="60dp"
+        android:layout_toEndOf="@+id/viewPUbicacionname"
+        android:fontFamily="@font/lemon"
+        android:text="TextView"
+        android:textColor="#ffff" />
+
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

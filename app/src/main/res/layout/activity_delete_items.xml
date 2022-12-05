@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".deleteItemsActivity"
+    android:orientation="vertical"
+    android:background="@drawable/backgroundgradient">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="268dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="50dp"
+        android:fontFamily="@font/lemon"
+        android:text="Eliminar pedimento "
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
+        android:fontFamily="@font/lemon"
+        android:text="Pedimento: "
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/barcodedelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/lemon"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16dp"
+
+        />
+
+    <Button
+        android:id="@+id/buttonscandelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp"
+
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:text="Escanear codigo de barras"
+        android:fontFamily="@font/lemon"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <Button
+        android:id="@+id/deleteItemToTheDatabasebtn"
+        android:layout_width="315dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Eliminar"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="211dp"
+        android:background="#FF00"
+        android:fontFamily="@font/lemon"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViews"
+        android:layout_marginTop="200dp">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>

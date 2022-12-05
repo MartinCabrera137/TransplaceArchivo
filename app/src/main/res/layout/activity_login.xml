@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lblIniciarSesion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/lemon"
+        android:text="Iniciar Sesión"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textAlignment="center"
+        />
+    <TextView
+        android:id="@+id/lblUsuario"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblIniciarSesion"
+        android:layout_marginBottom="-75dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Nombre de usuario"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/emailSignIn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblUsuario"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:drawableLeft="@drawable/ic_account_user"
+        android:textColor="#fff"
+        android:inputType="textPersonName"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/lblPasswordLogin"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/emailSignIn"
+        android:layout_marginBottom="-50dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/lemon"
+        android:text="Ingresa tu contraseña"
+        android:textAlignment="textStart"
+        android:textColor="@color/white"
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/lblPasswordLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginBottom="-25dp"
+        android:background="#FF505050"
+        android:textColor="#fff"
+        android:drawableLeft="@drawable/ic_password"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/password"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="-81dp"
+        android:background="#FF00"
+        android:fontFamily="@font/lemon"
+        android:text="Iniciar sesion"
+        android:textColor="#FFFF"
+        android:textSize="18dp" />
+
+
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Login"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-38dp"
+        android:clickable="true"
+        android:fontFamily="@font/lemon"
+        android:text="¿Olvidaste la contraseña?"
+        android:textColor="#FFF" />
+
+    <ProgressBar
+        android:id="@+id/progressbars"
+        android:layout_width="70dp"
+        android:layout_height="168dp"
+        android:layout_alignBottom="@+id/forgotpassword"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-193dp" />
+
+
+</RelativeLayout>
+

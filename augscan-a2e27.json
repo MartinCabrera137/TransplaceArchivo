@@ -1,0 +1,361 @@
+{
+  "Users" : {
+    "apoudel143" : {
+      "deptname" : "tata",
+      "email" : "apoudel143@gmail.com"
+    },
+    "arjanpdl" : {
+      "deptname" : "Computer",
+      "email" : "arjanpdl@gmail.com"
+    },
+    "arplon" : {
+      "email" : "arplon@gmail.com",
+      "name" : "help"
+    },
+    "aryal33" : {
+      "email" : "aryal33@gmail.com",
+      "name" : "Arjan"
+    },
+    "augscan" : {
+      "deptname" : "hell",
+      "email" : "augscan@gmail.com"
+    },
+    "canderson" : {
+      "deptname" : "kk",
+      "email" : "canderson@mcneese.edu"
+    },
+    "cateander27" : {
+      "deptname" : "lab",
+      "email" : "cateander27@gmail.com"
+    },
+    "dipesh@gmailcom" : {
+      "ItemByCategory" : {
+        "inventory" : {
+          "853158004112" : {
+            "PPCodigoBarras" : "853158004112",
+            "PUbicacion" : "inventory",
+            "PCliente" : "alkaline ",
+            "PPedimento" : "500"
+          }
+        }
+      },
+      "UserDetails" : {
+        "deptname" : "Comp",
+        "email" : "dipesh@gmail.com"
+      }
+    },
+    "finally" : {
+      "email" : "finally@gmail.com",
+      "name" : "Dept"
+    },
+    "hellll1111gmailcom" : {
+      "email" : "hellll1111@gmail.com",
+      "name" : "hell"
+    },
+    "help" : {
+      "deptname" : "help",
+      "email" : "help@gmail.com"
+    },
+    "help123" : {
+      "deptname" : "hel",
+      "email" : "help123@gmail.com"
+    },
+    "heven@gmailcom" : {
+      "ItemByCategory" : {
+        "Flowe" : {
+          "JOHN DOE" : {
+            "PPCodigoBarras" : "JOHN DOE",
+            "PUbicacion" : "Flowe",
+            "PCliente" : "Rose",
+            "PPedimento" : "10"
+          }
+        },
+        "Food" : {
+          "04963406" : {
+            "PPCodigoBarras" : "04963406",
+            "PUbicacion" : "Food",
+            "PCliente" : "Coke",
+            "PPedimento" : "2"
+          },
+          "078742051451" : {
+            "PPCodigoBarras" : "078742051451",
+            "PUbicacion" : "Food",
+            "PCliente" : "water",
+            "PPedimento" : "2"
+          },
+          "5014016150821" : {
+            "PPCodigoBarras" : "5014016150821",
+            "PUbicacion" : "Food",
+            "PCliente" : "choclate",
+            "PPedimento" : "2"
+          },
+          "5901234123457" : {
+            "PPCodigoBarras" : "5901234123457",
+            "PUbicacion" : "Food",
+            "PCliente" : "Water",
+            "PPedimento" : "10"
+          }
+        },
+        "Liquor" : {
+          "11410334" : {
+            "PPCodigoBarras" : "11410334",
+            "PUbicacion" : "Liquor",
+            "PCliente" : "wine",
+            "PPedimento" : "10"
+          }
+        },
+        "Person" : {
+          "1234567890" : {
+            "PPCodigoBarras" : "1234567890",
+            "PUbicacion" : "Person",
+            "PCliente" : "Hello",
+            "PPedimento" : "6000"
+          },
+          "812345000009" : {
+            "PPCodigoBarras" : "812345000009",
+            "PUbicacion" : "Person",
+            "PCliente" : "Arjan",
+            "PPedimento" : "600000"
+          }
+        },
+        "air" : {
+          "046500766510" : {
+            "PPCodigoBarras" : "046500766510",
+            "PUbicacion" : "air",
+            "PCliente" : "hello",
+            "PPedimento" : "6"
+          }
+        },
+        "phone" : {
+          "036000291452" : {
+            "PPCodigoBarras" : "036000291452",
+            "PUbicacion" : "phone",
+            "PCliente" : "iphone",
+            "PPedimento" : "100"
+          }
+        }
+      },
+
+
+      "Items" : {
+        "02420677" : {
+          "PPCodigoBarras" : "02420677",
+          "PUbicacion" : "Clorex",
+          "PCliente" : "Purex",
+          "PPedimento" : "10"
+        },
+        "04963406" : {
+          "PPCodigoBarras" : "04963406",
+          "PUbicacion" : "Food",
+          "PCliente" : "Coke",
+          "PPedimento" : "1"
+        },
+        "011111018457" : {
+          "PPCodigoBarras" : "011111018457",
+          "PUbicacion" : "Misc",
+          "PCliente" : "Dove",
+          "PPedimento" : "6"
+        },
+        "022400723310" : {
+          "PPCodigoBarras" : "022400723310",
+          "PUbicacion" : "Spray",
+          "PCliente" : "Trey Semme",
+          "PPedimento" : "13"
+        },
+        "043100095873" : {
+          "PPCodigoBarras" : "043100095873",
+          "PUbicacion" : "Stationary",
+          "PCliente" : "Copy",
+          "PPedimento" : "5"
+        },
+        "046500733338" : {
+          "PPCodigoBarras" : "046500733338",
+          "PUbicacion" : "freshness",
+          "PCliente" : "glade spray",
+          "PPedimento" : "20"
+        },
+        "046500766510" : {
+          "PPCodigoBarras" : "046500766510",
+          "PUbicacion" : "Spray",
+          "PCliente" : "Glade",
+          "PPedimento" : "10"
+        },
+        "047400097728" : {
+          "PPCodigoBarras" : "047400097728",
+          "PUbicacion" : "Body",
+          "PCliente" : "Gillet",
+          "PPedimento" : "3"
+        },
+        "051000217387" : {
+          "PPCodigoBarras" : "051000217387",
+          "PUbicacion" : "Juice",
+          "PCliente" : "v8 Juice",
+          "PPedimento" : "10"
+        },
+        "071691525462" : {
+          "PPCodigoBarras" : "071691525462",
+          "PUbicacion" : "Misc",
+          "PCliente" : "Mug",
+          "PPedimento" : "2"
+        },
+        "078742051451" : {
+          "PPCodigoBarras" : "078742051451",
+          "PUbicacion" : "Water",
+          "PCliente" : "Water",
+          "PPedimento" : "6"
+        },
+        "078742252384" : {
+          "PPCodigoBarras" : "078742252384",
+          "PUbicacion" : "Food",
+          "PCliente" : "Black Peper",
+          "PPedimento" : "6"
+        },
+        "078742297026" : {
+          "PPCodigoBarras" : "078742297026",
+          "PUbicacion" : "Food",
+          "PCliente" : "Almonds",
+          "PPedimento" : "8"
+        },
+        "078742351933" : {
+          "PPCodigoBarras" : "078742351933",
+          "PUbicacion" : "Grocery",
+          "PCliente" : "Glacier Watee",
+          "PPedimento" : "36"
+        },
+        "099988071416" : {
+          "PPCodigoBarras" : "099988071416",
+          "PUbicacion" : "Wine",
+          "PCliente" : "Menas",
+          "PPedimento" : "14"
+        },
+        "229088304989" : {
+          "PPCodigoBarras" : "229088304989",
+          "PUbicacion" : "Food",
+          "PCliente" : "Butter Crosant",
+          "PPedimento" : "6"
+        },
+        "325866105028" : {
+          "PPCodigoBarras" : "325866105028",
+          "PUbicacion" : "medicine",
+          "PCliente" : "advil",
+          "PPedimento" : "3"
+        },
+        "611935380084" : {
+          "PPCodigoBarras" : "611935380084",
+          "PUbicacion" : "sanitizer",
+          "PCliente" : "Medex",
+          "PPedimento" : "8"
+        },
+        "726282020047" : {
+          "PPCodigoBarras" : "726282020047",
+          "PUbicacion" : "Spring Water",
+          "PCliente" : "KentWood",
+          "PPedimento" : "3"
+        },
+        "788821010025" : {
+          "PPCodigoBarras" : "788821010025",
+          "PUbicacion" : "Food",
+          "PCliente" : "Achar",
+          "PPedimento" : "6"
+        },
+        "796252300196" : {
+          "PPCodigoBarras" : "796252300196",
+          "PUbicacion" : "Jucie",
+          "PCliente" : "Mango",
+          "PPedimento" : "3"
+        },
+        "797677300204" : {
+          "PPCodigoBarras" : "797677300204",
+          "PUbicacion" : "Food",
+          "PCliente" : "Ghee",
+          "PPedimento" : "6"
+        },
+        "806360681008" : {
+          "PPCodigoBarras" : "806360681008",
+          "PUbicacion" : "Medicine",
+          "PCliente" : "Aleeve",
+          "PPedimento" : "5"
+        },
+        "811538011211" : {
+          "PPCodigoBarras" : "811538011211",
+          "PUbicacion" : "liquior",
+          "PCliente" : "Jhose",
+          "PPedimento" : "6"
+        },
+        "9781454922759" : {
+          "PPCodigoBarras" : "9781454922759",
+          "PUbicacion" : "Book",
+          "PCliente" : "Hamilton",
+          "PPedimento" : "33"
+        }
+      },
+      "UserDetails" : {
+        "deptname" : "computer",
+        "email" : "heven@gmail.com"
+      }
+    },
+    "hmOQpsMV5oTVNSVMWLsRaLVPl7G2" : {
+      "email" : "hellopppp@yahoo.com",
+      "name" : "jp"
+    },
+    "love45@gmail" : {
+      "email" : "love45@gmail.com",
+      "name" : "love"
+    },
+    "nam" : {
+      "deptname" : "Tab",
+      "email" : "nam@gmail.com"
+    },
+    "name" : "pppp",
+    "nepal123@gmailcom" : {
+      "UserDetails" : {
+        "deptname" : "McNeese",
+        "email" : "nepal123@gmail.com"
+      }
+    },
+    "nepali1" : {
+      "deptname" : "lab",
+      "email" : "nepali1@gmail.com"
+    },
+    "nischal@gmailcom" : {
+      "ItemByCategory" : {
+        "Food" : {
+          "04963406" : {
+            "PPCodigoBarras" : "04963406",
+            "PUbicacion" : "Food",
+            "PCliente" : "Coca Cola",
+            "PPedimento" : "2"
+          }
+        }
+      },
+
+
+
+
+      "Items" : {
+        "04963406" : {
+          "PPCodigoBarras" : "04963406",
+          "PUbicacion" : "Food",
+          "PCliente" : "Coca Cola",
+          "PPedimento" : "2"
+        }
+      },
+      "UserDetails" : {
+        "deptname" : "Technology",
+        "email" : "Nischal@gmail.com"
+      }
+    },
+    "nischalaryalty" : {
+      "email" : "nischal.aryalty@gmail.com",
+      "name" : "Nischal"
+    },
+    "ram0onaru" : {
+      "deptname" : "hellp",
+      "email" : "ram0onaru@gmail.com"
+    },
+    "yam" : {
+      "deptname" : "yab",
+      "email" : "yam@gmail.com"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="357dp"
+        android:layout_height="347dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        app:srcCompat="@drawable/trnasplacebiglogo" />
+
+    <Button
+        android:id="@+id/LoginButtonMain"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="-55dp"
+
+        android:backgroundTint="#D50000"
+        android:drawableLeft="@drawable/ic_person_login"
+        android:fontFamily="@font/lemon"
+        android:hint="Iniciar sesion"
+        android:onClick="login"
+        android:textColorHint="#ffff"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/SignUpMain"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_alignBottom="@+id/LoginButtonMain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="-62dp"
+        android:backgroundTint="#D50000"
+
+        android:fontFamily="@font/lemon"
+        android:drawableLeft="@drawable/ic_person_register"
+        android:hint="Registrarse"
+        android:onClick="register"
+        android:textColorHint="#ffff"
+        android:textSize="18dp"
+
+        />
+
+</RelativeLayout>
