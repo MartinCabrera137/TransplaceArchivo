@@ -14,10 +14,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class additemActivity : AppCompatActivity() {
-    private var PCliente: EditText? = null
-    private var PUbicacion: EditText? = null
-    private var PPedimento: EditText? = null
-    private var PPCodigoBarras: TextView? = null
+    private var itemname: EditText? = null
+    private var itemcategory: EditText? = null
+    private var itemprice: EditText? = null
+    private var Pitembarcode: TextView? = null
     private var firebaseAuth: FirebaseAuth? = null
     var scanbutton: Button? = null
     var additemtodatabase: Button? = null
@@ -32,10 +32,10 @@ class additemActivity : AppCompatActivity() {
         resulttextview = findViewById(R.id.barcodeview)
         additemtodatabase = findViewById(R.id.additembuttontodatabase)
         scanbutton = findViewById(R.id.buttonscan)
-        PCliente = findViewById(R.id.editPCliente)
-        PUbicacion = findViewById(R.id.editcategory)
-        PPedimento = findViewById(R.id.editprice)
-        PPCodigoBarras = findViewById(R.id.barcodeview)
+        itemname = findViewById(R.id.edititemname)
+        itemcategory = findViewById(R.id.editcategory)
+        itemprice = findViewById(R.id.editprice)
+        Pitembarcode = findViewById(R.id.barcodeview)
 
 
         // String result = finaluser.substring(0, finaluser.indexOf("@"));
@@ -51,35 +51,35 @@ class additemActivity : AppCompatActivity() {
 
     // addding item to databse
     fun additem() {
-        val PClienteValue = PCliente!!.text.toString()
-        val PUbicacionValue = PUbicacion!!.text.toString()
-        val PPedimentoValue = PPedimento!!.text.toString()
-        val PPCodigoBarrasValue = PPCodigoBarras!!.text.toString()
+        val itemnameValue = itemname!!.text.toString()
+        val itemcategoryValue = itemcategory!!.text.toString()
+        val itempriceValue = itemprice!!.text.toString()
+        val PitembarcodeValue = Pitembarcode!!.text.toString()
         val users = firebaseAuth!!.currentUser
         val finaluser = users!!.email
         val resultemail = finaluser!!.replace(".", "")
-        if (PPCodigoBarrasValue.isEmpty()) {
-            PPCodigoBarras!!.error = "Vacio?"
-            PPCodigoBarras!!.requestFocus()
+        if (PitembarcodeValue.isEmpty()) {
+            Pitembarcode!!.error = "Vacio?"
+            Pitembarcode!!.requestFocus()
             return
         }
-        if (!TextUtils.isEmpty(PClienteValue) && !TextUtils.isEmpty(PUbicacionValue) && !TextUtils.isEmpty(
-                PPedimentoValue
+        if (!TextUtils.isEmpty(itemnameValue) && !TextUtils.isEmpty(itemcategoryValue) && !TextUtils.isEmpty(
+                itempriceValue
             )
         ) {
-            val items = Items(PClienteValue, PUbicacionValue, PPedimentoValue, PPCodigoBarrasValue)
-            databaseReference!!.child("Items").child(PPCodigoBarrasValue)
+            val items = Items(itemnameValue, itemcategoryValue, itempriceValue, PitembarcodeValue)
+            databaseReference!!.child("Items").child(PitembarcodeValue)
                 .setValue(items)
 
             databaseReferencecat!!.child("ItemPorCategoria")
-                .child(PUbicacionValue).child(PPCodigoBarrasValue).setValue(items)
+                .child(itemcategoryValue).child(PitembarcodeValue).setValue(items)
             //Limpiar datos
-            PCliente!!.setText("")
-            PUbicacion!!.setText("")
-            PPedimento!!.setText("")
-            PPCodigoBarras!!.text = "Codigo de barras"
+            itemname!!.setText("")
+            itemcategory!!.setText("")
+            itemprice!!.setText("")
+            Pitembarcode!!.text = "Codigo de barras"
             //Alerta de exito
-            Toast.makeText(this@additemActivity, "Cliente $PClienteValue agregado con exito", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@additemActivity, "Cliente $itemnameValue agregado con exito", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this@additemActivity, "Favor de llenar todos los campos", Toast.LENGTH_SHORT)
                 .show()

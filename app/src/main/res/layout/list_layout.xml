@@ -19,7 +19,7 @@
 
     >
     <TextView
-        android:id="@+id/viewPPCodigoBarrasname"
+        android:id="@+id/viewPitembarcodename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#ffff"
@@ -29,17 +29,17 @@
 
 
     <TextView
-        android:id="@+id/viewPPCodigoBarras"
+        android:id="@+id/viewPitembarcode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="53dp"
         android:textColor="#ffff"
         android:fontFamily="@font/lemon"
-        android:layout_toEndOf="@+id/viewPPCodigoBarrasname"
+        android:layout_toEndOf="@+id/viewPitembarcodename"
         android:text="TextView" />
 
     <TextView
-        android:id="@+id/viewPClientename"
+        android:id="@+id/viewitemnamename"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,19 +50,19 @@
 
 
     <TextView
-        android:id="@+id/viewPCliente"
+        android:id="@+id/viewitemname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="141dp"
         android:layout_marginTop="20dp"
-        android:layout_toEndOf="@+id/viewPClientename"
+        android:layout_toEndOf="@+id/viewitemnamename"
         android:fontFamily="@font/lemon"
         android:text="TextView"
         android:textColor="#ffff" />
 
     <TextView
         android:fontFamily="@font/lemon"
-        android:id="@+id/viewPPedimentoname"
+        android:id="@+id/viewitempricename"
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,20 +71,20 @@
         android:text="Pedimento" />
 
     <TextView
-        android:id="@+id/viewPPedimento"
+        android:id="@+id/viewitemprice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="114dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="40dp"
-        android:layout_toEndOf="@+id/viewPPedimentoname"
+        android:layout_toEndOf="@+id/viewitempricename"
         android:fontFamily="@font/lemon"
         android:text="TextView"
         android:textColor="#ffff" />
 
     <TextView
         android:fontFamily="@font/lemon"
-        android:id="@+id/viewPUbicacionname"
+        android:id="@+id/viewitemcategoryname"
         android:layout_marginTop="60dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -93,13 +93,13 @@
         android:text="Ubicación" />
 
     <TextView
-        android:id="@+id/viewPUbicacion"
+        android:id="@+id/viewitemcategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="60dp"
-        android:layout_toEndOf="@+id/viewPUbicacionname"
+        android:layout_toEndOf="@+id/viewitemcategoryname"
         android:fontFamily="@font/lemon"
         android:text="TextView"
         android:textColor="#ffff" />

@@ -53,7 +53,7 @@ class scanItemsActivity : AppCompatActivity() {
 
     fun firebasesearch(searchtext: String) {
         val firebaseSearchQuery =
-            mdatabaseReference!!.orderByChild("PCodigoBarras").startAt(searchtext)
+            mdatabaseReference!!.orderByChild("itembarcode").startAt(searchtext)
                 .endAt(searchtext + "\uf8ff")
         val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<Items, UsersViewHolder> =
             object : FirebaseRecyclerAdapter<Items, UsersViewHolder>(
@@ -69,10 +69,10 @@ class scanItemsActivity : AppCompatActivity() {
                 ) {
                     viewHolder.setDetails(
                         applicationContext,
-                        model.PCliente,
-                        model.PUbicacion,
-                        model.PPedimento,
-                        model.PCodigoBarras
+                        model.itemname,
+                        model.itemcategory,
+                        model.itemprice,
+                        model.itembarcode
 
                     )
                 }
@@ -83,19 +83,19 @@ class scanItemsActivity : AppCompatActivity() {
     class UsersViewHolder(var mView: View) : ViewHolder(mView) {
         fun setDetails(
             ctx: Context?,
-            PPCodigoBarras: String?,
-            PUbicacion: String?,
-            PCliente: String?,
-            PPedimento: String?
+            Pitembarcode: String?,
+            itemcategory: String?,
+            itemname: String?,
+            itemprice: String?
         ) {
-            val CodigoBarras = mView.findViewById<View>(R.id.viewPPCodigoBarras) as TextView
-            val Cliente = mView.findViewById<View>(R.id.viewPCliente) as TextView
-            val Ubicacion = mView.findViewById<View>(R.id.viewPUbicacion) as TextView
-            val Pedimento = mView.findViewById<View>(R.id.viewPPedimento) as TextView
-            CodigoBarras.text = PPCodigoBarras
-            Cliente.text = PUbicacion
-            Ubicacion.text = PCliente
-            Pedimento.text = PPedimento
+            val CodigoBarras = mView.findViewById<View>(R.id.viewPitembarcode) as TextView
+            val Cliente = mView.findViewById<View>(R.id.viewitemname) as TextView
+            val Ubicacion = mView.findViewById<View>(R.id.viewitemcategory) as TextView
+            val Pedimento = mView.findViewById<View>(R.id.viewitemprice) as TextView
+            CodigoBarras.text = Pitembarcode
+            Cliente.text = itemcategory
+            Ubicacion.text = itemname
+            Pedimento.text = itemprice
         }
     }
 

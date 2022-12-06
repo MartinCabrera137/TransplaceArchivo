@@ -46,25 +46,25 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 
 class Items {
-    var PCliente: String? = null
+    var itemname: String? = null
         private set
-    var PUbicacion: String? = null
+    var itemcategory: String? = null
         private set
-    var PPedimento: String? = null
+    var itemprice: String? = null
         private set
-    var PCodigoBarras: String? = null
+    var itembarcode: String? = null
         private set
 
     constructor() {}
     constructor(
-        PCliente: String?,
-        PUbicacion: String?,
-        PPedimento: String?,
-        PCodigoBarras: String?
+        itemname: String?,
+        itemcategory: String?,
+        itemprice: String?,
+        itembarcode: String?
     ) {
-        this.PCliente = PCliente
-        this.PUbicacion = PUbicacion
-        this.PPedimento = PPedimento
-        this.PCodigoBarras = PCodigoBarras
+        this.itemname = itemname
+        this.itemcategory = itemcategory
+        this.itemprice = itemprice
+        this.itembarcode = itembarcode
     }
 }

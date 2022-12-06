@@ -84,7 +84,7 @@ class viewInventoryActivity : AppCompatActivity() {
                 var sum = 0
                 for (ds in dataSnapshot.children) {
                     val map = ds.value as Map<String, Any>?
-                    val price = map!!["PPedimento"]
+                    val price = map!!["itemprice"]
                     val pValue = price.toString().toInt()
                     sum += pValue
                 }
@@ -110,10 +110,10 @@ class viewInventoryActivity : AppCompatActivity() {
                 ) {
                     viewHolder.setDetails(
                         applicationContext,
-                        model.PCliente,
-                        model.PUbicacion,
-                        model.PPedimento,
-                        model.PCodigoBarras
+                        model.itemname,
+                        model.itemcategory,
+                        model.itemprice,
+                        model.itembarcode
                     )
                 }
             }

@@ -55,7 +55,7 @@ class deleteItemsActivity : AppCompatActivity() {
 
     fun firebasesearch(searchtext: String) {
         val firebaseSearchQuery =
-            databaseReference!!.orderByChild("PPCodigoBarras").startAt(searchtext)
+            databaseReference!!.orderByChild("Pitembarcode").startAt(searchtext)
                 .endAt(searchtext + "\uf8ff")
         val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<Items, scanItemsActivity.UsersViewHolder> =
             object : FirebaseRecyclerAdapter<Items, scanItemsActivity.UsersViewHolder>(
@@ -71,10 +71,10 @@ class deleteItemsActivity : AppCompatActivity() {
                 ) {
                     viewHolder.setDetails(
                         applicationContext,
-                        model.PCodigoBarras,
-                        model.PUbicacion,
-                        model.PCliente,
-                        model.PPedimento
+                        model.itembarcode,
+                        model.itemcategory,
+                        model.itemname,
+                        model.itemprice
                     )
                 }
             }
@@ -84,19 +84,19 @@ class deleteItemsActivity : AppCompatActivity() {
     class UsersViewHolder(var mView: View) : RecyclerView.ViewHolder(mView) {
         fun setDetails(
             ctx: Context?,
-            PPCodigoBarras: String?,
-            PUbicacion: String?,
-            PCliente: String?,
-            PPedimento: String?
+            Pitembarcode: String?,
+            itemcategory: String?,
+            itemname: String?,
+            itemprice: String?
         ) {
-            val item_barcode = mView.findViewById<View>(R.id.viewPPCodigoBarras) as TextView
-            val item_name = mView.findViewById<View>(R.id.viewPCliente) as TextView
-            val item_category = mView.findViewById<View>(R.id.viewPUbicacion) as TextView
-            val item_price = mView.findViewById<View>(R.id.viewPPedimento) as TextView
-            item_barcode.text = PPCodigoBarras
-            item_category.text = PUbicacion
-            item_name.text = PCliente
-            item_price.text = PPedimento
+            val item_barcode = mView.findViewById<View>(R.id.viewPitembarcode) as TextView
+            val item_name = mView.findViewById<View>(R.id.viewitemname) as TextView
+            val item_category = mView.findViewById<View>(R.id.viewitemcategory) as TextView
+            val item_price = mView.findViewById<View>(R.id.viewitemprice) as TextView
+            item_barcode.text = Pitembarcode
+            item_category.text = itemcategory
+            item_name.text = itemname
+            item_price.text = itemprice
         }
     }
     fun deletefrmdatabase() {
