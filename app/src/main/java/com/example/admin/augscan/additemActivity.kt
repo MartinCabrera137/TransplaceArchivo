@@ -14,10 +14,10 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
 class additemActivity : AppCompatActivity() {
-    private var itemname: EditText? = null
-    private var itemcategory: EditText? = null
-    private var itemprice: EditText? = null
-    private var Pitembarcode: TextView? = null
+    private var itemNombreCliente: EditText? = null
+    private var itemUbicacion: EditText? = null
+    private var itemPedimento: EditText? = null
+    private var PitemCodigoBarras: TextView? = null
     private var firebaseAuth: FirebaseAuth? = null
     var scanbutton: Button? = null
     var additemtodatabase: Button? = null
@@ -27,15 +27,15 @@ class additemActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_additem)
         firebaseAuth = FirebaseAuth.getInstance()
-        databaseReference = FirebaseDatabase.getInstance().getReference("Items")
-        databaseReferencecat = FirebaseDatabase.getInstance().getReference("Items")
+        databaseReference = FirebaseDatabase.getInstance().getReference("items")
+        databaseReferencecat = FirebaseDatabase.getInstance().getReference("items")
         resulttextview = findViewById(R.id.barcodeview)
         additemtodatabase = findViewById(R.id.additembuttontodatabase)
         scanbutton = findViewById(R.id.buttonscan)
-        itemname = findViewById(R.id.edititemname)
-        itemcategory = findViewById(R.id.editcategory)
-        itemprice = findViewById(R.id.editprice)
-        Pitembarcode = findViewById(R.id.barcodeview)
+        itemNombreCliente = findViewById(R.id.edititemNombreCliente)
+        itemUbicacion = findViewById(R.id.editcategory)
+        itemPedimento = findViewById(R.id.editprice)
+        PitemCodigoBarras = findViewById(R.id.barcodeview)
 
 
         // String result = finaluser.substring(0, finaluser.indexOf("@"));
@@ -51,35 +51,35 @@ class additemActivity : AppCompatActivity() {
 
     // addding item to databse
     fun additem() {
-        val itemnameValue = itemname!!.text.toString()
-        val itemcategoryValue = itemcategory!!.text.toString()
-        val itempriceValue = itemprice!!.text.toString()
-        val PitembarcodeValue = Pitembarcode!!.text.toString()
+        val itemNombreClienteValue = itemNombreCliente!!.text.toString()
+        val itemUbicacionValue = itemUbicacion!!.text.toString()
+        val itemPedimentoValue = itemPedimento!!.text.toString()
+        val PitemCodigoBarrasValue = PitemCodigoBarras!!.text.toString()
         val users = firebaseAuth!!.currentUser
         val finaluser = users!!.email
         val resultemail = finaluser!!.replace(".", "")
-        if (PitembarcodeValue.isEmpty()) {
-            Pitembarcode!!.error = "Vacio?"
-            Pitembarcode!!.requestFocus()
+        if (PitemCodigoBarrasValue.isEmpty()) {
+            PitemCodigoBarras!!.error = "Vacio?"
+            PitemCodigoBarras!!.requestFocus()
             return
         }
-        if (!TextUtils.isEmpty(itemnameValue) && !TextUtils.isEmpty(itemcategoryValue) && !TextUtils.isEmpty(
-                itempriceValue
+        if (!TextUtils.isEmpty(itemNombreClienteValue) && !TextUtils.isEmpty(itemUbicacionValue) && !TextUtils.isEmpty(
+                itemPedimentoValue
             )
         ) {
-            val items = Items(itemnameValue, itemcategoryValue, itempriceValue, PitembarcodeValue)
-            databaseReference!!.child("Items").child(PitembarcodeValue)
+            val items = items(itemNombreClienteValue, itemUbicacionValue, itemPedimentoValue, PitemCodigoBarrasValue)
+            databaseReference!!.child("items").child(PitemCodigoBarrasValue)
                 .setValue(items)
 
-            databaseReferencecat!!.child("ItemPorCategoria")
-                .child(itemcategoryValue).child(PitembarcodeValue).setValue(items)
+            databaseReferencecat!!.child("itemsPorUbicacion")
+                .child(itemUbicacionValue).child(PitemCodigoBarrasValue).setValue(items)
             //Limpiar datos
-            itemname!!.setText("")
-            itemcategory!!.setText("")
-            itemprice!!.setText("")
-            Pitembarcode!!.text = "Codigo de barras"
+            itemNombreCliente!!.setText("")
+            itemUbicacion!!.setText("")
+            itemPedimento!!.setText("")
+            PitemCodigoBarras!!.text = "Codigo de barras"
             //Alerta de exito
-            Toast.makeText(this@additemActivity, "Cliente $itemnameValue agregado con exito", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@additemActivity, "Cliente $itemNombreClienteValue agregado con exito", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this@additemActivity, "Favor de llenar todos los campos", Toast.LENGTH_SHORT)
                 .show()

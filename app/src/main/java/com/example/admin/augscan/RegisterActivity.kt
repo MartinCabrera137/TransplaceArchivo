@@ -26,14 +26,14 @@ import android.support.v4.content.ContextCompat
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.CardView
-import com.example.admin.augscan.deleteItemsActivity
-import com.example.admin.augscan.scanItemsActivity
+import com.example.admin.augscan.deleteitemsActivity
+import com.example.admin.augscan.scanitemsActivity
 import com.example.admin.augscan.viewInventoryActivity
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.LinearLayoutManager
 import com.example.admin.augscan.ScanCodeActivitysearch
 import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.example.admin.augscan.scanItemsActivity.UsersViewHolder
+import com.example.admin.augscan.scanitemsActivity.UsersViewHolder
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.util.Patterns
 import android.view.View

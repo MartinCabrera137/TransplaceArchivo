@@ -30,41 +30,41 @@ import android.support.v4.content.ContextCompat
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.CardView
-import com.example.admin.augscan.deleteItemsActivity
-import com.example.admin.augscan.scanItemsActivity
+import com.example.admin.augscan.deleteitemsActivity
+import com.example.admin.augscan.scanitemsActivity
 import com.example.admin.augscan.viewInventoryActivity
 import android.widget.ImageButton
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.LinearLayoutManager
 import com.example.admin.augscan.ScanCodeActivitysearch
 import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.example.admin.augscan.scanItemsActivity.UsersViewHolder
+import com.example.admin.augscan.scanitemsActivity.UsersViewHolder
 import android.support.v7.widget.RecyclerView.ViewHolder
 import com.example.admin.augscan.ScanCodeActivitydel
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 
-class Items {
-    var itemname: String? = null
+class items {
+    var itemNombreCliente: String? = null
         private set
-    var itemcategory: String? = null
+    var itemUbicacion: String? = null
         private set
-    var itemprice: String? = null
+    var itemPedimento: String? = null
         private set
-    var itembarcode: String? = null
+    var itemCodigoBarras: String? = null
         private set
 
     constructor() {}
     constructor(
-        itemname: String?,
-        itemcategory: String?,
-        itemprice: String?,
-        itembarcode: String?
+        itemNombreCliente: String?,
+        itemUbicacion: String?,
+        itemPedimento: String?,
+        itemCodigoBarras: String?
     ) {
-        this.itemname = itemname
-        this.itemcategory = itemcategory
-        this.itemprice = itemprice
-        this.itembarcode = itembarcode
+        this.itemNombreCliente = itemNombreCliente
+        this.itemUbicacion = itemUbicacion
+        this.itemPedimento = itemPedimento
+        this.itemCodigoBarras = itemCodigoBarras
     }
 }

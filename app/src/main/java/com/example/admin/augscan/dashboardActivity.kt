@@ -26,14 +26,14 @@ import android.support.v4.content.ContextCompat
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.CardView
-import com.example.admin.augscan.deleteItemsActivity
-import com.example.admin.augscan.scanItemsActivity
+import com.example.admin.augscan.deleteitemsActivity
+import com.example.admin.augscan.scanitemsActivity
 import com.example.admin.augscan.viewInventoryActivity
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.LinearLayoutManager
 import com.example.admin.augscan.ScanCodeActivitysearch
 import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.example.admin.augscan.scanItemsActivity.UsersViewHolder
+import com.example.admin.augscan.scanitemsActivity.UsersViewHolder
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.Menu
 import android.view.MenuItem
@@ -47,9 +47,9 @@ import com.google.firebase.database.DatabaseError
 class dashboardActivity : AppCompatActivity(), View.OnClickListener {
     private var firebaseAuth: FirebaseAuth? = null
     var toast: Button? = null
-    private var addItems: CardView? = null
-    private var deleteItems: CardView? = null
-    private var scanItems: CardView? = null
+    private var additems: CardView? = null
+    private var deleteitems: CardView? = null
+    private var scanitems: CardView? = null
     private var viewInventory: CardView? = null
     private var logout: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -70,14 +70,14 @@ class dashboardActivity : AppCompatActivity(), View.OnClickListener {
 //                Toast.makeText(dashboardActivity.this, users.getEmail(), Toast.LENGTH_SHORT).show();
 //            }
 //        });
-        addItems = findViewById<View>(R.id.addItems) as CardView
-        deleteItems = findViewById<View>(R.id.deleteItems) as CardView
-        scanItems = findViewById<View>(R.id.scanItems) as CardView
+        additems = findViewById<View>(R.id.additems) as CardView
+        deleteitems = findViewById<View>(R.id.deleteitems) as CardView
+        scanitems = findViewById<View>(R.id.scanitems) as CardView
         viewInventory = findViewById<View>(R.id.viewInventory) as CardView
         logout = findViewById<View>(R.id.btnCerrarSesion) as Button
-        addItems!!.setOnClickListener(this)
-        deleteItems!!.setOnClickListener(this)
-        scanItems!!.setOnClickListener(this)
+        additems!!.setOnClickListener(this)
+        deleteitems!!.setOnClickListener(this)
+        scanitems!!.setOnClickListener(this)
         viewInventory!!.setOnClickListener(this)
         logout!!.setOnClickListener(this)
     }
@@ -85,16 +85,16 @@ class dashboardActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View) {
         val i: Intent
         when (view.id) {
-            R.id.addItems -> {
+            R.id.additems -> {
                 i = Intent(this, additemActivity::class.java)
                 startActivity(i)
             }
-            R.id.deleteItems -> {
-                i = Intent(this, deleteItemsActivity::class.java)
+            R.id.deleteitems -> {
+                i = Intent(this, deleteitemsActivity::class.java)
                 startActivity(i)
             }
-            R.id.scanItems -> {
-                i = Intent(this, scanItemsActivity::class.java)
+            R.id.scanitems -> {
+                i = Intent(this, scanitemsActivity::class.java)
                 startActivity(i)
             }
             R.id.viewInventory -> {

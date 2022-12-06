@@ -14,7 +14,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class scanItemsActivity : AppCompatActivity() {
+class scanitemsActivity : AppCompatActivity() {
     private var firebaseAuth: FirebaseAuth? = null
     var scantosearch: ImageButton? = null
     var searchbtn: Button? = null
@@ -29,7 +29,7 @@ class scanItemsActivity : AppCompatActivity() {
         val finaluser = users!!.email
         val resultemail = finaluser!!.replace(".", "")
         mdatabaseReference =
-            FirebaseDatabase.getInstance().getReference("Items").child("Items")
+            FirebaseDatabase.getInstance().getReference("items").child("items")
         resultsearcheview = findViewById(R.id.searchfield)
         scantosearch = findViewById(R.id.imageButtonsearch)
         searchbtn = findViewById(R.id.searchbtnn)
@@ -53,26 +53,26 @@ class scanItemsActivity : AppCompatActivity() {
 
     fun firebasesearch(searchtext: String) {
         val firebaseSearchQuery =
-            mdatabaseReference!!.orderByChild("itembarcode").startAt(searchtext)
+            mdatabaseReference!!.orderByChild("itemCodigoBarras").startAt(searchtext)
                 .endAt(searchtext + "\uf8ff")
-        val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<Items, UsersViewHolder> =
-            object : FirebaseRecyclerAdapter<Items, UsersViewHolder>(
-                Items::class.java,
+        val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<items, UsersViewHolder> =
+            object : FirebaseRecyclerAdapter<items, UsersViewHolder>(
+                items::class.java,
                 R.layout.list_layout,
                 UsersViewHolder::class.java,
                 firebaseSearchQuery
             ) {
                 override fun populateViewHolder(
                     viewHolder: UsersViewHolder,
-                    model: Items,
+                    model: items,
                     position: Int
                 ) {
                     viewHolder.setDetails(
                         applicationContext,
-                        model.itemname,
-                        model.itemcategory,
-                        model.itemprice,
-                        model.itembarcode
+                        model.itemCodigoBarras,
+                        model.itemNombreCliente,
+                        model.itemPedimento,
+                        model.itemUbicacion
 
                     )
                 }
@@ -83,19 +83,19 @@ class scanItemsActivity : AppCompatActivity() {
     class UsersViewHolder(var mView: View) : ViewHolder(mView) {
         fun setDetails(
             ctx: Context?,
-            Pitembarcode: String?,
-            itemcategory: String?,
-            itemname: String?,
-            itemprice: String?
+            PitemCodigoBarras: String?,
+            itemUbicacion: String?,
+            itemNombreCliente: String?,
+            itemPedimento: String?
         ) {
-            val CodigoBarras = mView.findViewById<View>(R.id.viewPitembarcode) as TextView
-            val Cliente = mView.findViewById<View>(R.id.viewitemname) as TextView
-            val Ubicacion = mView.findViewById<View>(R.id.viewitemcategory) as TextView
-            val Pedimento = mView.findViewById<View>(R.id.viewitemprice) as TextView
-            CodigoBarras.text = Pitembarcode
-            Cliente.text = itemcategory
-            Ubicacion.text = itemname
-            Pedimento.text = itemprice
+            val CodigoBarras = mView.findViewById<View>(R.id.viewPitemCodigoBarras) as TextView
+            val Cliente = mView.findViewById<View>(R.id.viewitemNombreCliente) as TextView
+            val Ubicacion = mView.findViewById<View>(R.id.viewitemUbicacion) as TextView
+            val item = mView.findViewById<View>(R.id.viewitemPedimento) as TextView
+            CodigoBarras.text = PitemCodigoBarras
+            Cliente.text = itemUbicacion
+            Ubicacion.text = itemNombreCliente
+            item.text = itemPedimento
         }
     }
 

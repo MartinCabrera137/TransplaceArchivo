@@ -20,8 +20,8 @@
         <activity android:name=".ScanCodeActivity" />
         <activity android:name=".ScanCodeActivitydel" />
         <activity android:name=".viewInventoryActivity" />
-        <activity android:name=".scanItemsActivity" />
-        <activity android:name=".deleteItemsActivity" />
+        <activity android:name=".scanitemsActivity" />
+        <activity android:name=".deleteitemsActivity" />
         <activity android:name=".additemActivity" />
         <activity android:name=".dashboardActivity" />
         <activity android:name=".RegisterActivity" />

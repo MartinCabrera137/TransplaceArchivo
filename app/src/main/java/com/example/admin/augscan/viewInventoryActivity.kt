@@ -30,15 +30,15 @@ import android.support.v4.content.ContextCompat
 import android.content.pm.PackageManager
 import android.support.v4.app.ActivityCompat
 import android.support.v7.widget.CardView
-import com.example.admin.augscan.deleteItemsActivity
-import com.example.admin.augscan.scanItemsActivity
+import com.example.admin.augscan.deleteitemsActivity
+import com.example.admin.augscan.scanitemsActivity
 import com.example.admin.augscan.viewInventoryActivity
 import android.widget.ImageButton
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.LinearLayoutManager
 import com.example.admin.augscan.ScanCodeActivitysearch
 import com.firebase.ui.database.FirebaseRecyclerAdapter
-import com.example.admin.augscan.scanItemsActivity.UsersViewHolder
+import com.example.admin.augscan.scanitemsActivity.UsersViewHolder
 import android.support.v7.widget.RecyclerView.ViewHolder
 import com.example.admin.augscan.ScanCodeActivitydel
 import com.google.firebase.database.ValueEventListener
@@ -61,7 +61,7 @@ class viewInventoryActivity : AppCompatActivity() {
         val finaluser = users!!.email
         val resultemail = finaluser!!.replace(".", "")
         mdatabaseReference =
-            FirebaseDatabase.getInstance().getReference("Items").child("Items")
+            FirebaseDatabase.getInstance().getReference("items").child("items")
         mrecyclerview = findViewById(R.id.recyclerViews)
         val manager = LinearLayoutManager(this)
         mrecyclerview!!.setLayoutManager(manager)
@@ -84,7 +84,7 @@ class viewInventoryActivity : AppCompatActivity() {
                 var sum = 0
                 for (ds in dataSnapshot.children) {
                     val map = ds.value as Map<String, Any>?
-                    val price = map!!["itemprice"]
+                    val price = map!!["itemPedimento"]
                     val pValue = price.toString().toInt()
                     sum += pValue
                 }
@@ -96,24 +96,24 @@ class viewInventoryActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<Items, UsersViewHolder> =
-            object : FirebaseRecyclerAdapter<Items, UsersViewHolder>(
-                Items::class.java,
+        val firebaseRecyclerAdapter: FirebaseRecyclerAdapter<items, UsersViewHolder> =
+            object : FirebaseRecyclerAdapter<items, UsersViewHolder>(
+                items::class.java,
                 R.layout.list_layout,
                 UsersViewHolder::class.java,
                 mdatabaseReference
             ) {
                 override fun populateViewHolder(
                     viewHolder: UsersViewHolder,
-                    model: Items,
+                    model: items,
                     position: Int
                 ) {
                     viewHolder.setDetails(
                         applicationContext,
-                        model.itemname,
-                        model.itemcategory,
-                        model.itemprice,
-                        model.itembarcode
+                        model.itemCodigoBarras,
+                        model.itemNombreCliente,
+                        model.itemUbicacion,
+                        model.itemPedimento
                     )
                 }
             }
